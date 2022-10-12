@@ -33,7 +33,21 @@ app.get('/pessoas/:nome', (req, res) => {
     return res.json(pessoa)
 })
 
-// Criar uma API de soma. Vai receber dois parametros de rota, vai retornar a soma dos dois
+// Criar uma API de soma. Vai receber dois parametros de rota, vai retornar a soma dos numeros.
+
+
+app.get('/soma/:numeroUm/:numeroDois', (req, res) => {
+    const numeroUm = req.params.numeroUm
+    const numeroDois = req.params.numeroDois
+    const result = Number(numeroUm) + Number(numeroDois)
+
+    return res.json({
+        result
+    })
+})
+
+
+
 // app.get('/pessoas/eu', (req, res) => {
 //     return res.json({
 //         Nome: 'Brenda',
@@ -46,3 +60,4 @@ app.get('/pessoas/:nome', (req, res) => {
 app.listen(8000, () => {
     console.log('servidor iniciado')
 })
+
