@@ -33,28 +33,48 @@ app.get('/pessoas/:nome', (req, res) => {
     return res.json(pessoa)
 })
 
-// Criar uma API de soma. Vai receber dois parametros de rota, vai retornar a soma dos numeros.
+// Criar uma API de soma. Vai receber dois parametros de rota, vai retornar a soma dos numeros, ou a subtracao ou retornar o maior.
+
+// app.get('/mostrarMaior/:numeroUm/:numeroDois', (req, res) => {
+//     const numeroUm = Number(req.params.numeroUm)
+//     const numeroDois = Number(req.params.numeroDois)
+
+//     return res.json(Math.max(numeroUm,numeroDois))
+
+// })
 
 
-app.get('/soma/:numeroUm/:numeroDois', (req, res) => {
-    const numeroUm = req.params.numeroUm
-    const numeroDois = req.params.numeroDois
-    const result = Number(numeroUm) + Number(numeroDois)
+/** criar uma api post que vai receber um objeto como parametro, nesse objeto vai ter nome e sobrenome. Retornar nome completo.  */
+// app.post('/nome-completo', (req, res) => {
 
-    return res.json({
-        result
-    })
-})
+//     const nome = req.body.nome
+//     const sobrenome = req.body.sobrenome
+//     return res.json(nome + ' ' + sobrenome)
+// })
+
+/**criar um api GET que vai ter um parametro numerico na rota que significa a idade, retornar a idade depois do proximo aniversario. */
+
+// app.get('/aniversario/:idade', (req, res) => {
+//     const idade = Number(req.params.idade);
+//     return res.json(idade + 1)
+// })
+
+/**  */
 
 
 
-// app.get('/pessoas/eu', (req, res) => {
-//     return res.json({
-//         Nome: 'Brenda',
-//         Idade: 21,
-//         EstadoCivil: 'União Estável',
-//     });
-// });
+
+
+
+
+
+/**app.get('/pessoas/eu', (req, res) => {
+   return res.json({
+       Nome: 'Brenda',
+       Idade: 21,
+       EstadoCivil: 'União Estável',
+   });
+}); */
 
 
 app.listen(8000, () => {
